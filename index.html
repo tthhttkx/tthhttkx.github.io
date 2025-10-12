@@ -3,21 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>丹丹专属</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="E:/1/333/0.jpg">
+    <title>彤彤天天开心</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            overflow: hidden;
+            height: 100vh;
+            position: relative;
+            background-color: #000;
+        }
+        
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            overflow: hidden;
+        }
+        
+        #background-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        .text-container {
+            position: fixed;
+            top: 10%;
+            right: 5%;
+            height: 50%;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2;
+      
+        }
+        
+        .text-content {
+            color: pink;
+            font-size: 50px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            letter-spacing: 0.2em;
+            text-align: center;
+            writing-mode: horizontal-tb;
+        }
+        
+
+        @media (max-width: 768px) {
+            .text-container {
+                width: 80px;
+            }
+            
+            .text-content {
+                font-size: 20px;
+                letter-spacing: 0.1em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <img id="mainImage" src="./images/0.jpg" alt="加载出错">
-        <h1 id="question">丹丹你可以成为我的恋人吗？</h1>
-        <div class="buttons">
-            <button id="yes">可以</button>
-            <button id="no">不要</button>
-        </div>
+    <div class="video-container">
+        <video id="background-video" autoplay muted loop playsinline>
+            <source src="image/8191a2cfec7bb97bc16b890ae264f7e7_raw.mp4"  type="video/mp4">
+  
+        </video>
     </div>
-
-   
-    <script src="script.js"></script>
+    
+    <div class="text-container">
+        <div class="text-content">彤彤天天开心</div>
+    </div>
 </body>
 </html>
